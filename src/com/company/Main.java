@@ -8,7 +8,7 @@ public class Main {
     }
     public class Die {
         private final int MAX = 6;             //Max 6 sider
-        private int faceValue;                 //Hvilken side terningen viser
+        private int faceValue;                 //Hvilken side terningen viser (terningens state)
 
         public Die()
         {
