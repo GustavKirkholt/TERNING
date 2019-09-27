@@ -6,10 +6,13 @@ public class Main {
 
         // Her opretter vi en klasse og en metode til at lave en ny terning
     }
-    public class Die{
+    public class Die {
         private final int MAX = 6;             //Max 6 sider
         private int faceValue;                 //Hvilken side terningen viser
 
-
-
+        public Die()
+        {
+            faceValue = 1;                     //Terningen starter på side 1 - CONSTRUCTOR
+        }
+    }
 }
