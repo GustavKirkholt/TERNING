@@ -16,4 +16,3 @@ public class Main {
             //Terningen starter på side 1 - CONSTRUCTOR
         }
     }
-}
