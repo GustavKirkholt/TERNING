@@ -1,5 +1,9 @@
 package com.company;
 
+import java.util.Scanner;
+
+import static jdk.nashorn.internal.objects.Global.print;
+
 public class Game {
 
     String player1;
@@ -19,6 +23,17 @@ public class Game {
     }
 
     public void start(){
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Hvad er spiller 1's navn");
+        String username1 = input.nextLine();
+
+        System.out.println("Hvad er spiller 2's navn");
+        String username2 = input.nextLine();
+
+        System.out.println(username1 + " & " + username2);
+
         //player one enter name
         //player two enter name;
 
