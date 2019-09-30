@@ -23,7 +23,7 @@ public class Game {
 
     }
 
-    public void start(){
+    public void start() {
 
         Scanner input = new Scanner(System.in);
 
@@ -47,25 +47,33 @@ public class Game {
             if (value1 == value2) {
                 p1Score = p1Score - p1Score;
             } else {
-                p1Score =  p1Score + value1 + value2;
-                System.out.println(p1Score);
+                p1Score = p1Score + value1 + value2;
+                System.out.println(player1 + " " + p1Score);
 
             }
+                int value3 = die1.roll();
+                int value4 = die2.roll();
+                if (value3 == value4) {
+                    p2Score = p2Score - p2Score;
+                } else {
+                    p2Score = p2Score + value3 + value4;
+                    System.out.println(player2 + " " + p2Score);
 
+                }
 
-            // next player roll
-            // check if two of the same
-            // If true - reset score
-            // If false - game continues
-            // Add score
-            // is score above max? set winner
+                // next player roll
+                // check if two of the same
+                // If true - reset score
+                // If false - game continues
+                // Add score
+                // is score above max? set winner
 
-            // end player turn
+                // end player turn
+            }
+
         }
 
+
     }
-
-
-}
 
 
