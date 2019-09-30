@@ -1,18 +1,14 @@
 package com.company;
 
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
+        Game g = new Game();
+        g.start();
 
-        // Her opretter vi en klasse og en metode til at lave en ny terning
-    }
-    public class Die {
-        private final int MAX = 6;             //Max 6 sider
-        private int faceValue;                 //Hvilken side terningen viser (terningens state)
 
-        public Die()
-        {
-            faceValue = 1;
-            //Terningen starter på side 1 - CONSTRUCTOR
-        }
     }
+}
+
