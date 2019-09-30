@@ -25,6 +25,7 @@ public class Game {
         // game start
 
         // while(no winner)
+        while (p1Score < 40 || p2Score < 40);
         // next player roll
         // is winning throw?
         //set winner / add score
