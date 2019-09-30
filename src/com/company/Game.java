@@ -41,14 +41,15 @@ public class Game {
         // game start
 
         // while(no winner)
-        while (p1Score < 40 || p2Score < 40) {
+        while (p1Score < 40 & p2Score < 40) {
             int value1 = die1.roll();
             int value2 = die2.roll();
-            if (value1 == value2);
-            {
+            if (value1 == value2) {
                 p1Score = p1Score - p1Score;
             } else {
                 p1Score =  p1Score + value1 + value2;
+                System.out.println(p1Score);
+
             }
 
 
