@@ -41,8 +41,10 @@ public class Game {
 
         // while(no winner)
         // next player roll
-        // is winning throw?
-        //set winner / add score
+        // check if two of the same
+        // If true - reset score
+        // If false - game continues
+        // Add score
         // is score above max? set winner
 
         // end player turn
