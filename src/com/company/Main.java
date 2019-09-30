@@ -12,7 +12,8 @@ public class Main {
 
         public Die()
         {
-            faceValue = 1;                     //Terningen starter på side 1 - CONSTRUCTOR
+            faceValue = 1;
+            //Terningen starter på side 1 - CONSTRUCTOR
         }
     }
 }
