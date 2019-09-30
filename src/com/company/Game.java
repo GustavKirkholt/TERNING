@@ -78,9 +78,9 @@ public class Game {
         if (p1Score == p2Score){
             System.out.println("Its a Tie");
         } else if(p1Score > p2Score){
-            System.out.println("Congratulations " + player1 + " you are the winner");
+            System.out.println("Congratulations, " + player1 + " you are the winner");
         } else {
-            System.out.println("Congratulations " + player2 + " you are the winner");
+            System.out.println("Congratulations, " + player2 + " you are the winner");
         }
 
     }
