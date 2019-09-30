@@ -3,11 +3,11 @@ package com.company;
 import java.util.Random;
 
 public class Die {
-    private final int MAX = 6;             //Max 6 sider
-    private int faceValue;                 //Hvilken side terningen viser
+    private final int MAX = 6;
+    private int faceValue;
 
     public Die() {
-        faceValue = roll();                     //Terningen starter på side 1 - CONSTRUCTOR
+        faceValue = roll();
     }
 
     public int getFaceValue() {
