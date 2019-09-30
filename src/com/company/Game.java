@@ -26,7 +26,7 @@ public class Game {
 
         // while(no winner)
         // next player roll
-        // is winning thorow?
+        // is winning throw?
         //set winner / add score
         // is score above max? set winner
 
