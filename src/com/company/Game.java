@@ -1,6 +1,7 @@
 package com.company;
 
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 //import static jdk.nashorn.internal.objects.Global.print;
@@ -19,6 +20,8 @@ public class Game {
     Die die1;
     Die die2;
 
+    ArrayList<Playerbase> playerList;
+
     public Game() {
         die1 = new Die();
         die2 = new Die();
@@ -29,6 +32,30 @@ public class Game {
     public void start() {
 
         Scanner input = new Scanner(System.in);
+
+//        int players = input.nextInt();
+//        playerList = new ArrayList<>();
+//
+//        for (int i  = 0; i<players; i++){
+//            playerList.add(new Playerbase("player "+(i+1),0));
+//        }
+//
+//        for(Playerbase p : playerList){
+//            System.out.println(" ");
+//            System.out.println("Press Enter to continue " + Color.ANSI_RED + p.name + Color.ANSI_RESET);
+//            String Nothing1 = input.nextLine();
+//            int value1 = die1.roll();
+//            int value2 = die2.roll();
+//            System.out.println(Color.ANSI_RED + p.name + Color.ANSI_RESET + ", You rolled " + value1 + " and " + value2);
+//            if (value1 == value2) {
+//                p.score = 0;
+//            } else {
+//                p.score = p.score + value1 + value2;
+//            }
+//        }
+
+
+
 
         System.out.println( Color.ANSI_RED + "Hvad er spiller 1's navn" + Color.ANSI_RESET);
         String player1 = input.nextLine();
