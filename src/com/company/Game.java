@@ -79,7 +79,7 @@ public class Game {
             int value1 = die1.roll();
             int value2 = die2.roll();
             System.out.println(Color.ANSI_RED + player1 + Color.ANSI_RESET + ", You rolled " + value1 + " and " + value2);
-            if (value1 == value2) {
+            if (value1 == 1 && value2 == 1) {
                 p1Score = p1Score - p1Score;
             } else {
                 p1Score = p1Score + value1 + value2;
@@ -91,7 +91,7 @@ public class Game {
             int value3 = die1.roll();
             int value4 = die2.roll();
             System.out.println(Color.ANSI_BLUE + player2 + Color.ANSI_RESET + ", You rolled " + value3 + " and " + value4);
-            if (value3 == value4) {
+            if (value3 == 1 && value4 == 1) {
                 p2Score = p2Score - p2Score;
             } else {
                 p2Score = p2Score + value3 + value4;
