@@ -13,6 +13,12 @@ public class Game {
     String player1;
     String player2;
 
+    int p1;
+    int p2;
+
+    int count;
+
+
     int p1Score;
     int p2Score;
 
@@ -20,7 +26,6 @@ public class Game {
     Die die1;
     Die die2;
 
-    ArrayList<Playerbase> playerList;
 
     public Game() {
         die1 = new Die();
@@ -28,34 +33,20 @@ public class Game {
 
     }
 
+    public void test() {
+        while (count < 1000)
+        System.out.println(count);
+        int value1 = die1.roll();
+        int value2 = die2.roll();
+        System.out.println(value1);
+        System.out.println(value2);
+
+
+    }
 
     public void start() {
 
         Scanner input = new Scanner(System.in);
-
-//        int players = input.nextInt();
-//        playerList = new ArrayList<>();
-//
-//        for (int i  = 0; i<players; i++){
-//            playerList.add(new Playerbase("player "+(i+1),0));
-//        }
-//
-//        for(Playerbase p : playerList){
-//            System.out.println(" ");
-//            System.out.println("Press Enter to continue " + Color.ANSI_RED + p.name + Color.ANSI_RESET);
-//            String Nothing1 = input.nextLine();
-//            int value1 = die1.roll();
-//            int value2 = die2.roll();
-//            System.out.println(Color.ANSI_RED + p.name + Color.ANSI_RESET + ", You rolled " + value1 + " and " + value2);
-//            if (value1 == value2) {
-//                p.score = 0;
-//            } else {
-//                p.score = p.score + value1 + value2;
-//            }
-//        }
-
-
-
 
         System.out.println( Color.ANSI_RED + "Hvad er spiller 1's navn" + Color.ANSI_RESET);
         String player1 = input.nextLine();
@@ -65,14 +56,8 @@ public class Game {
 
         System.out.println(Color.ANSI_RED + player1 + Color.ANSI_RESET + " & " + Color.ANSI_BLUE + player2 + Color.ANSI_RESET);
 
-        //player one enter name
-        //player two enter name;
-
-        // game start
-
-        // while(no winner)
         System.out.println(Color.ANSI_RESET);
-        while (p1Score < 40 && p2Score < 40) {
+        while (p1Score < 40 && p2Score < 40 ) {
             System.out.println(" ");
             System.out.println("Press Enter to continue " + Color.ANSI_RED + player1 + Color.ANSI_RESET);
             String Nothing1 = input.nextLine();
@@ -98,13 +83,6 @@ public class Game {
 
             }
             System.out.println(Color.ANSI_BLUE + player2 + Color.ANSI_RESET + " " + p2Score);
-                // next player roll
-                // check if two of the same
-                // If true - reset score
-                // If false - game continues
-                // Add score
-                // is score above max? set winner
-                // end player turn
         }
 
         if (p1Score == p2Score){
