@@ -15,7 +15,6 @@ public class Die {
     }
 
     public int roll() {
-        // Math.random(5) + 1;
 
         Random diceRoller = new Random();
         faceValue = diceRoller.nextInt(6) + 1;
