@@ -4,20 +4,21 @@ import java.util.Random;
 
 public class Die {
     private final int MAX = 6;
-    private int faceValue;
 
+    /**
+     * A constructor is created
+     */
     public Die() {
-        faceValue = roll();
     }
 
-    public int getFaceValue() {
-        return faceValue;
-    }
-
+    /**
+     * The method called roll() contains a number generator
+     * which returns a value between 1 and 6
+     */
     public int roll() {
 
         Random diceRoller = new Random();
-        faceValue = diceRoller.nextInt(6) + 1;
+        int faceValue = diceRoller.nextInt(6) + 1;
 
         return faceValue;
     }

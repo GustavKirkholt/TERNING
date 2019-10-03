@@ -38,6 +38,9 @@ public class Game {
 
     public void start() {
 
+        int p1 = 0;
+        int p2 = 0;
+
         Scanner input = new Scanner(System.in);
 
         System.out.println( Color.ANSI_RED + "Hvad er spiller 1's navn" + Color.ANSI_RESET);
@@ -49,16 +52,19 @@ public class Game {
         System.out.println(Color.ANSI_RED + player1 + Color.ANSI_RESET + " & " + Color.ANSI_BLUE + player2 + Color.ANSI_RESET);
 
         System.out.println(Color.ANSI_RESET);
-        while (p1 <= 1 || p2 <= 1) {                                                                                        //We create a while with the winning condition
+        //We create a while with the winning condition
+        while (p1 < 1 && p2 < 1) {
             System.out.println(" ");
-            System.out.println("Press Enter to continue " + Color.ANSI_RED + player1 + Color.ANSI_RESET);                   //A text is printed to tell the player to press enter to continue
-            String Nothing1 = input.nextLine();                                                                             //A string is created to make a simple continue mechanic
-            int value1 = die1.roll();                                                                                       //The random number generator is referenced and therefore the method is used
-            int value2 = die2.roll();                                                                                       //The second die is created so we can distinguish between the dice being rolled
+            System.out.println("Press Enter to continue " + Color.ANSI_RED + player1 + Color.ANSI_RESET);
+            //A string is created to make a simple continue mechanic
+            String Nothing1 = input.nextLine();
+            //The roll function returns a random number between 1 and 6
+            int value1 = die1.roll();
+            int value2 = die2.roll();
             System.out.println(Color.ANSI_RED + player1 + Color.ANSI_RESET + ", You rolled " + value1 + " and " + value2);  //The value of the dice is being printed for the players to see
             p1Score = p1Score + value1 + value2;
             if (value1 == 1 && value2 == 1) {                                                                               //The programme checks if the values are both 1
-                p1Score = p1Score - p1Score;                                                                                //If true - The score of player 1 is reset
+                p1Score = 0;                                                                                                //If true - The score of player 1 is reset
             } else if(value1 == value2){
                 if(p1Score >= 40){
                     p1++;
@@ -70,21 +76,21 @@ public class Game {
             String Nothing2 = input.nextLine();                                                                             //Another string is added to create the simple continue mechanic
             int value3 = die1.roll();                                                                                       //The random generator is referenced again and the method used to give die1 a value
             int value4 = die2.roll();                                                                                       //Die2 is then given a value
-            System.out.println(Color.ANSI_BLUE + player2 + Color.ANSI_RESET + ", You rolled " + value3 + " and " + value4); //the numbers rolled are printed for the players to see
-            p2Score = p2Score + value3 + value4;                                                                            //If false - The values are added to the score of player 2
+            System.out.println(Color.ANSI_BLUE + player2 + Color.ANSI_RESET + ", You rolled " + value3 + " and " + value4); //the numbers rolled are printed for the players to see//If false - The values are added to the score of player 2
             if (value3 == 1 && value4 == 1) {                                                                               //The programme checks if the values are both 1
                 p2Score = 0;                                                                                                 //If true - The score of player 1 is reset
             } else if(value3 == value4){
                 if(p1Score >= 40){
-                    p1++;
+                    p2++;
                 }
+            } else {
+                p2Score = p2Score + value3 + value4;
             }
             System.out.println(Color.ANSI_BLUE + player2 + Color.ANSI_RESET + " " + p2Score);
-
         }
-        if (p1Score == p2Score){                                                                                            //When the while loop is broken the scores of the players are checked to see if they are the same
+        if (p1Score == p2Score && (p1 >= 1 || p2 >=1)){                                                                                            //When the while loop is broken the scores of the players are checked to see if they are the same
             System.out.println("Its a Tie");                                                                                //If both scores are equal - Its a tie, printed for the players to see
-        } else if(p1Score > p2Score){                                                                                       //We then see if player 1´s score is bigger than player 2´s score
+        } else if(p1 == 1){                                                                                       //The programme checks if player 1´s score is bigger than player 2´s score
             System.out.println( Color.ANSI_RED_BACKGROUND);
             System.out.println(Color.ANSI_RESET + "Congratulations, " + player1 + " you are the winner");                   //If true - Player 1 is the winner
             System.out.println( Color.ANSI_RED_BACKGROUND);
